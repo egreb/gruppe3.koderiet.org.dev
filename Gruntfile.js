@@ -302,12 +302,12 @@ module.exports = function (grunt) {
       }
     },
     // https://github.com/robwierzbowski/generator-jekyllrb/issues/106
-    // scsslint: {
-    //   // See https://www.npmjs.org/package/grunt-scss-lint for options.
-    //   allFiles: [
-    //     '<%= yeoman.app %>/_scss/**/*.scss'
-    //   ]
-    // },
+    scsslint: {
+       // See https://www.npmjs.org/package/grunt-scss-lint for options.
+       allFiles: [
+         '<%= yeoman.app %>/_scss/**/*.scss'
+       ]
+     },
     concurrent: {
       server: [
         'sass:server',
@@ -353,8 +353,8 @@ module.exports = function (grunt) {
     'jekyll:check',
     'sass:server',
     'jshint:all',
-    'csslint:check'
-    // 'scsslint'
+    'csslint:check',
+    'scsslint'
   ]);
 
   grunt.registerTask('build', [

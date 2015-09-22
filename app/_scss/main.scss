@@ -1,5 +1,5 @@
 $black: #333;
-$gray: #999;
+$gray: #F0EEE9;
 $green: #737245;
 $white: #fff;
 
@@ -22,10 +22,14 @@ html {
 }
 
 body {
-  font-family: verdana;
+  font-family: SourceCodePro-Regular;
   background: url('../img/bg.jpeg')no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+div {
+    display: block;
 }
 
 a {
@@ -37,14 +41,52 @@ a:hover {
     color: $black;
 }
 
-p {
-  font-size: 1rem; }
-
 h1 {
-  font-size: 2.33rem; }
+    font-size: 2.25rem; }
 
 h2 {
-  font-size: 1.66rem; }
+    font-size: 1.875rem; }
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+h5 {
+    font-size: 0.875;
+}
+
+h1,h2,h3 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.625rem;
+}
+
+h4, h5 {
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+}
+
+ul {
+    padding: 0 20px;
+}
+
+.content {
+    width: 90%;
+    padding: 40px 20px;
+}
+
+.cover {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
 
 .page-wrap {
     width: 100%;
@@ -62,17 +104,18 @@ h2 {
     margin: 0 auto;
 }
 
-.content {
-    padding-top: 220px;
+.container {
+    padding-top: 200px;
 }
 
 .header {
     padding: 30px 0 10px 0;
-    background: #F0EEE9;
+    background: $gray;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 9999;
 }
 
 .title {
@@ -84,12 +127,19 @@ h2 {
 }
 
 .navbar {
-    padding-top: 20px;
+    padding-top: 40px;
 }
 .navbar li{
     float: left;
     list-style: none;
     padding: 0 10px;
+}
+
+.background-gray {
+    background: $gray;
+}
+.background-gray-transparent {
+    background: rgba(240, 238, 233, 0.9);
 }
 
 #bg {
@@ -100,37 +150,6 @@ h2 {
     align-items: center;
     width: 100%;
     min-height: 100%;
-}
-
-.intro {
-    background: rgba(0, 0, 0, 0.5);
-    margin-top: 60px;
-
-}
-
-.intro h1, .intro p, .intro a {
-    color: #fff;
-}
-
-.intro h3 {
-    text-align: center;
-}
-
-.intro h3 a:hover {
-    color: orange!important;
-}
-
-.back {
-    background: #fefefe;
-
-    h1 {
-        text-align: center;
-    }
-}
-
-.black-transparent {
-    background: rgba(51, 51, 51, 0.8)!important;
-    color: #fefefe!important;
 }
 
 .titlebox {
@@ -146,16 +165,6 @@ h2 {
     padding: 10px;
 }
 
-.back:first-of-type {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.back:last-of-type {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
 .footer, .page-wrap:after {
     height: 30px;
 }
@@ -167,39 +176,62 @@ h2 {
 
 /* about us */
 .person {
-    width: 100%;
-    padding: 2.5%;
+    background: #fefefe;
     display: flex;
     flex-direction: row;
-    margin: 2.5% 0;
+    padding: 20px 0;
 }
 
-.image {
-    width: 25%;
+.image /* box */ {
+    width: 30%;
+    flex: auto;
+    padding: 20px;
 }
 
 .image img {
     width: 200px;
     height: 200px;
     background: #333;
-    border-radius: 50%;
+    border-radius: 200px;
+    border: 1px solid rgba(1,1,2,.1);
 }
 
-.text {
-    flex: auto;
-    padding: 10px 0;
+.text /* box */ {
+    position: relative;
+    width: 70%;
+    min-height: 200px;
+    padding: 20px;
 }
 
-.splitter {
-    height: 1px;
-    width: 80%;
-    background: #999;
-    margin: 0 auto;
+.links {
+    position: absolute;
+    bottom: 0;
+}
+
+.button {
+    display: block;
+    background: $black;
+    padding: 10px 20px;
+    width: 150px;
+    text-align: center;
+}
+
+.button:hover {
+    background: $gray;
 }
 
 .listwhatwecando {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-left: 30px;
 }
+
+.blogposts {
+    padding: 10px;
+    background: #fff;
+    margin: 20px 0;
+}
+
+/* end blog posts */
 /* clearfix */
 .clearfix:after {
      visibility: hidden;
@@ -225,6 +257,10 @@ h2 {
 
 .padding-big {
     padding: 20px 60px;
+}
+
+.padding-small-sides-only {
+    padding: 0 20px;
 }
 
 .white-text {
