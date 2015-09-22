@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="wrapper back">
+
+    {% for post in site.posts limit: 5 %}
+        <div class="post_test">
+            <h1><a href="{{post.url}}">{{post.title}}</a></h1>
+            <h2>{{ page.date | date: "%b %-d, %Y" }}</h2>
+
+            <p>
+                {{ post.content }}
+            </p>
+
+        </div>
+    {% endfor %}
+
+</div>
