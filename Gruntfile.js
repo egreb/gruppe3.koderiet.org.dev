@@ -318,6 +318,16 @@ module.exports = function (grunt) {
         'sass:dist',
         'copy:dist'
       ]
+  },
+  buildcontrol: {
+      dist: {
+        options: {
+          remote: 'https://github.com/egreb/gruppe3.koderiet.org',
+          branch: 'master',
+          commit: true,
+          push: true
+        }
+      }
     }
   });
 
@@ -354,7 +364,7 @@ module.exports = function (grunt) {
     'sass:server',
     'jshint:all',
     'csslint:check',
-    'scsslint'
+    //'scsslint'
   ]);
 
   grunt.registerTask('build', [
@@ -379,4 +389,11 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('deploy', [
+      'check',
+      'test',
+      'build',
+      'buildcontrol'
+      ]);
 };

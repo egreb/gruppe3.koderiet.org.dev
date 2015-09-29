@@ -2,6 +2,7 @@ $black: #333;
 $gray: #F0EEE9;
 $green: #737245;
 $white: #fff;
+$font: 'Roboto', sans-serif;
 
 * {
     margin: 0;
@@ -22,7 +23,7 @@ html {
 }
 
 body {
-  font-family: SourceCodePro-Regular;
+  font-family: $font;
   background: url('../img/bg.jpeg')no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -75,7 +76,18 @@ ul {
 
 .content {
     width: 90%;
-    padding: 40px 20px;
+    padding: 20px;
+    margin: 0 auto;
+
+    h1 {
+        text-align: center;
+        border-bottom: 1px solid #333;
+        width: 50%;
+        margin: 20px auto;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1024) {
+        padding: 20px 10px;
+    }
 }
 
 .cover {
@@ -140,16 +152,12 @@ ul {
 }
 .background-gray-transparent {
     background: rgba(240, 238, 233, 0.9);
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-#bg {
-    background: url('../img/bg.jpeg')no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100%;
+.background-white {
+    background: #f7f7f7;
 }
 
 .titlebox {
@@ -176,7 +184,6 @@ ul {
 
 /* about us */
 .person {
-    background: #fefefe;
     display: flex;
     flex-direction: row;
     padding: 20px 0;
