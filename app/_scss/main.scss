@@ -18,21 +18,37 @@ html,body {
 
 html {
   font-size: 18px;
-  line-height: 1.333;
-  font-color: $black;
-}
+  line-height: 1.5rem;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #EAEAEA;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 18px;
+     }
+     @media only screen and (max-width: 480px) {
+          font-size: 16px;
+      }
+  }
 
 body {
   font-family: $font;
-  background: url('../img/bg.jpeg')no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 div {
     display: block;
 }
 
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem; }
+  @media only screen and (max-width: 480px) {
+    p {
+      font-size: 1.1rem;
+      line-height: 1.65rem; } }
 a {
     color: orange;
     text-decoration: none;
@@ -42,23 +58,37 @@ a:hover {
     color: $black;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
 h1 {
-    font-size: 2.25rem; }
+  font-size: 2.66rem;
+  line-height: 3.99rem;
+  margin-bottom: 0.75rem; }
 
 h2 {
-    font-size: 1.875rem; }
+  font-size: 2.15rem;
+  line-height: 3.225rem;
+  margin-bottom: 0.75rem; }
 
 h3 {
-    font-size: 1.5rem;
-}
+  font-size: 1.66rem;
+  line-height: 2.49rem;
+  margin-bottom: 0.75rem; }
 
 h4 {
-    font-size: 1.125rem;
-}
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  margin-bottom: 0.75rem; }
 
-h5 {
-    font-size: 0.875;
-}
+h5,
+h6 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0rem;
+  margin-bottom: 1.5rem; }
+
 
 h1,h2,h3 {
     margin-top: 1.25rem;
@@ -114,6 +144,17 @@ ul {
 .wrapper {
     width: 960px;
     margin: 0 auto;
+
+    @media only screen and (max-width: 480px) {
+        width: 94%;
+        max-width: 480px;
+
+    }
+
+    @media only screen and (max-width: 768px) {
+          width: 94%;
+          max-width: 480px;
+  }
 }
 
 .container {
@@ -208,6 +249,11 @@ ul {
     width: 70%;
     min-height: 200px;
     padding: 20px;
+
+    p {
+        margin-bottom: 50px;
+    }
+
 }
 
 .links {
