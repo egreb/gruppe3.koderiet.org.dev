@@ -1,26 +1,24 @@
 ---
 layout: default
 ---
-<div class="wrapper content background-gray">
+<div class="wrapper">
+    <div class="content">
+        <h1>Dagbok</h1>
+            {% for post in site.posts limit: 5 %}
+                <article class="blogposts">
+                    <div class="post_test">
+                        <h3><a href="{{post.url}}">{{post.title}}</a></h3>
+                        <h4>{{ post.date | date: "%b %-d, %Y" }}</h4>
 
-    <h1>Prosjekt Dagbok</h1>
+                        <p class="padding-small-sides-only">
+                            {{ post.excerpt }}
+                        </p>
+                        <br />
+                        <a href="{{ post.url }}">[ Les mer.. ]</a>
+                    </div>
+                </article>
+            {% endfor %}
 
-    {% for post in site.posts limit: 5 %}
-        <article class="blogposts">
-            <div class="post_test">
-                <h3><a href="{{post.url}}">{{post.title}}</a></h3>
-                <h4>{{ post.date | date: "%b %-d, %Y" }}</h4>
-
-                <p class="padding-small-sides-only">
-                    {{ post.excerpt }}
-                </p>
-                <br />
-                <a href="{{ post.url }}">[ Les mer.. ]</a>
-            </div>
-        </article>
-    {% endfor %}
-
-    </article>
-
-
+            </article>
+    </div>
 </div>

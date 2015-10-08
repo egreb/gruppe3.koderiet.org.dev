@@ -18,21 +18,37 @@ html,body {
 
 html {
   font-size: 18px;
-  line-height: 1.333;
-  font-color: $black;
-}
+  line-height: 1.5rem;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #EAEAEA;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 18px;
+     }
+     @media only screen and (max-width: 480px) {
+          font-size: 16px;
+      }
+  }
 
 body {
   font-family: $font;
-  background: url('../img/bg.jpeg')no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 div {
     display: block;
 }
 
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem; }
+  @media only screen and (max-width: 480px) {
+    p {
+      font-size: 1.1rem;
+      line-height: 1.65rem; } }
 a {
     color: orange;
     text-decoration: none;
@@ -42,23 +58,37 @@ a:hover {
     color: $black;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
 h1 {
-    font-size: 2.25rem; }
+  font-size: 2.66rem;
+  line-height: 3.99rem;
+  margin-bottom: 0.75rem; }
 
 h2 {
-    font-size: 1.875rem; }
+  font-size: 2.15rem;
+  line-height: 3.225rem;
+  margin-bottom: 0.75rem; }
 
 h3 {
-    font-size: 1.5rem;
-}
+  font-size: 1.66rem;
+  line-height: 2.49rem;
+  margin-bottom: 0.75rem; }
 
 h4 {
-    font-size: 1.125rem;
-}
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  margin-bottom: 0.75rem; }
 
-h5 {
-    font-size: 0.875;
-}
+h5,
+h6 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0rem;
+  margin-bottom: 1.5rem; }
+
 
 h1,h2,h3 {
     margin-top: 1.25rem;
@@ -75,9 +105,8 @@ ul {
 }
 
 .content {
-    width: 90%;
-    padding: 20px;
-    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 30px;
 
     h1 {
         text-align: center;
@@ -91,13 +120,24 @@ ul {
 }
 
 .cover {
-    width: 100%;
-    height: 50vh;
+    background: url("../img/bg.jpg")no-repeat;
+    background-size: cover;
     display: flex;
     -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
+    width: 100%;
+    height: 100vh;
+
+    .content {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+    }
 }
 
 .page-wrap {
@@ -114,14 +154,29 @@ ul {
 .wrapper {
     width: 960px;
     margin: 0 auto;
-}
 
-.container {
-    padding-top: 200px;
+    @media only screen and (max-width: 480px) {
+        width: 94%;
+        max-width: 480px;
+
+    }
+
+    @media only screen and (max-width: 768px) {
+          max-width: 720px;
+          width: 94%;
+  }
+
+      /* Portrait */
+    @media only screen
+      and (min-device-width: 768px)
+      and (max-device-width: 1024px)
+      and (orientation: portrait)
+      and (-webkit-min-device-pixel-ratio: 1) {
+          max-width: 720px;
+    }
 }
 
 .header {
-    padding: 30px 0 10px 0;
     background: $gray;
     width: 100%;
     position: fixed;
@@ -134,30 +189,36 @@ ul {
     float: left;
 }
 
+#hamburger {
+    display: none;
+
+    @media only screen and (max-width: 480px) {
+        display: block;
+        border-bottom: 17px double black;
+        border-top: 6px solid black;
+        content:"";
+        height: 5px;
+        width:40px;
+        position: relative;
+        top: 35px;
+        right: 20px;
+    }
+}
 .nav {
     float: right;
 }
 
 .navbar {
-    padding-top: 40px;
+    padding-top: 50px;
+
+    @media only screen and (max-width: 480px) {
+        display: none;
+    }
 }
 .navbar li{
     float: left;
     list-style: none;
     padding: 0 10px;
-}
-
-.background-gray {
-    background: $gray;
-}
-.background-gray-transparent {
-    background: rgba(240, 238, 233, 0.9);
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.background-white {
-    background: #f7f7f7;
 }
 
 .titlebox {
@@ -171,15 +232,6 @@ ul {
     color: $black;
     font-size: 3rem;
     padding: 10px;
-}
-
-.footer, .page-wrap:after {
-    height: 30px;
-}
-
-.footer {
-    background: rgba(51, 51, 51, 0.6);
-    width: 100%;
 }
 
 /* about us */
@@ -208,6 +260,11 @@ ul {
     width: 70%;
     min-height: 200px;
     padding: 20px;
+
+    p {
+        margin-bottom: 50px;
+    }
+
 }
 
 .links {
@@ -233,9 +290,9 @@ ul {
 }
 
 .blogposts {
-    padding: 10px;
-    background: #fff;
     margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
 }
 
 /* end blog posts */
