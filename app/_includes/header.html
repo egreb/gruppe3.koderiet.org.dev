@@ -4,13 +4,17 @@
       <h1 class="title"><a href="/">{{ site.name }}</a></h1>
 
         <nav class="nav">
-            <div id="hamburger"></div>
-            <ul class="navbar">
-                <li><a href="../about.html">Om oss</a></li>
-                <li><a href="../project.html">Prosjektet</a></li>
-                <li><a href="../projectdiary.html">Dagbok</a></li>
-                <li><a href="../contact.html">Kontakt</a></li>
+            <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+            <label for="nav-trigger"></label>
+            <ul role="dropdown" class="navbar">
+                <li class="nav-item"><a href="../about.html">Om oss</a></li>
+                <li class="nav-item"><a href="../project.html">Prosjektet</a></li>
+                <li class="nav-item"><a href="../projectdiary.html">Dagbok</a></li>
+                <li class="nav-item"><a href="../contact.html">Kontakt</a></li>
             </ul>
+
+
+            <!--<div id="hamburger"></div>-->
         </nav>
 
     </div>
