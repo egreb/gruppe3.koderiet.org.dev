@@ -242,12 +242,13 @@ ul {
 
 .nav-item {
     float: left;
-    text-align: right;
+    padding: 0 10px;
     @media only screen and (max-width: 480px) {
         width: 100%;
         padding: 0;
         border-top: 1px solid #111;
         border-bottom: 1px solid #000;
+        text-align: right;
     }
 }
 
@@ -303,11 +304,15 @@ label[for="nav-trigger"] {
 }
 
 label[for="nav-trigger"] + .navbar {
-    display: none;
+    @media only sceen and (max-width: 480px) {
+        display: none;
+    }
 }
 
 input[type="checkbox"]:checked ~ ul {
-    display: block;
+    @media only screen and (max-width: 480px) {
+        display: block;
+    }
 }
 
 .titlebox {
