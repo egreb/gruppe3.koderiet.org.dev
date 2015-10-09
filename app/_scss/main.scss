@@ -334,12 +334,24 @@ input[type="checkbox"]:checked ~ ul {
     display: flex;
     flex-direction: row;
     padding: 20px 0;
+
+    @media only screen and (max-width:480px) {
+        float: left;
+        width: 100%;
+        display: block;
+    }
 }
 
 .image /* box */ {
     width: 30%;
     flex: auto;
     padding: 20px;
+
+    @media only screen and (max-width:480px) {
+        text-align: center;
+        width: 90%;
+        float: left;
+    }
 }
 
 .image img {
@@ -348,6 +360,7 @@ input[type="checkbox"]:checked ~ ul {
     background: #333;
     border-radius: 200px;
     border: 1px solid rgba(1,1,2,.1);
+
 }
 
 .text /* box */ {
@@ -358,6 +371,14 @@ input[type="checkbox"]:checked ~ ul {
 
     p {
         margin-bottom: 50px;
+    }
+
+    @media only screen and (max-width:480px) {
+
+        h2 {
+            text-align: center;
+        }
+        width: 94%;
     }
 
 }
