@@ -375,10 +375,15 @@ input[type="checkbox"]:checked ~ ul {
 
     @media only screen and (max-width:480px) {
         padding: 0;
+        width: 100%;
         h2 {
             text-align: center;
         }
-        width: 94%;
+
+        p {
+            margin-bottom: 20px;
+        }
+
     }
 
 }
@@ -386,6 +391,12 @@ input[type="checkbox"]:checked ~ ul {
 .links {
     position: absolute;
     bottom: 0;
+
+    @media only screen and (max-width: 480px){
+        position: relative;
+        float: left;
+
+    }
 }
 
 .button {
