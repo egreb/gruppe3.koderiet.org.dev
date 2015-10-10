@@ -192,6 +192,32 @@ ul {
     left: 0;
     z-index: 9999;
 
+    h1 {
+        float: left;
+
+        @media only screen and (max-width: 480px) {
+            margin: 5px 10px;
+
+            h1 {
+                display: none;
+
+            }
+            h2 {
+                display: block;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            padding: 0;
+            margin: 0;
+            font-size: 1.66rem;
+            line-height: 2.99rem;
+            margin-bottom: 0.75rem;
+        }
+    }
+
     @media only screen and (max-width: 480px) {
         height: 50px;
 
@@ -202,12 +228,15 @@ ul {
             display: block;
         }
     }
+
+    @media only screen and (max-width: 768px) {
+        height: 50px;
+    }
 }
 
 .title {
     float: left;
 
-    h2 { display: none;}
     @media only screen and (max-width: 480px) {
         margin: 5px 10px;
 
@@ -220,6 +249,12 @@ ul {
             padding: 0;
             margin: 0;
         }
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 0;
+        margin: 0;
+        font-size: 1.66rem;
     }
 }
 
@@ -254,6 +289,9 @@ ul {
         z-index: 0;
         list-style: none;
         padding: 0;
+    }
+    @media only screen and (max-width: 768px) {
+        padding-top: 15px;
     }
 }
 
