@@ -2,7 +2,7 @@
 layout: post
 title:  "Bacheloroppgave på plass!"
 date:   2016-01-05 13:45:00
-categories: bachlor
+categories: jekyll update
 ---
 Etter noen runder med utsendelse av eposter til forskjellige bedrifter fikk vi positiv respons
 fra <a href="http://www.aller.no/">Aller Media</a>!
