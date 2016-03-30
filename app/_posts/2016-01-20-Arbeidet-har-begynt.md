@@ -4,7 +4,7 @@ title:  "Arbeidet har begynt!"
 date:   2016-01-20 09:00:00
 categories: dagbok
 ---
-<h2>Hallo bloggen</h2>
+<h4>Hallo bloggen</h4>
 
 Etter en litt treg start har vi endelig kommet i gang med bachelorprosjektet.
 Aller har vært så hyggelige og laget plass til oss i sine flotte lokaler på Hasle. Her kan vi komme og gå så mye vi bare orker. <br />

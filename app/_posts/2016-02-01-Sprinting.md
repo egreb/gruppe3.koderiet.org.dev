@@ -4,7 +4,7 @@ title:  "Scrumban!"
 date:   2016-02-01 09:00:00
 categories: dagbok
 ---
-<h2>Første sprint ferdig</h2>
+<h4>Første sprint ferdig</h4>
 
 Da var vår først sprint ferdig og det er på tide å planlegge en ny. Vi jobber med sprint intervaller på 2 uker.
 Vår oppgave er å gi brukere av dagbladet muligheten til å komme med kildekritikk på forskjellige artikler.
